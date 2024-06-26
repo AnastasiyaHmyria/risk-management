@@ -35,3 +35,9 @@ entity Priority : CodeList {
                     low    = 'L';
             };
 }
+
+entity ListOfRisks as select from Risks {
+ ID,
+ owner,
+ title
+};
