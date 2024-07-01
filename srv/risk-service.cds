@@ -13,6 +13,20 @@ service RiskService {
     @readonly entity ListOfRisks1 as projection on rm.ListOfRisks
     annotate ListOfRisks1 with @odata.draft.enabled;
 
+    entity Items as projection on rm.Items;
+    annotate Items with @odata.draft.enabled;
+
+
+
+    action addItem (title:String,descr:String,quantity:Integer);
+    function getItem (quantity:Integer) returns many Items;
+    // BusinessPartner will be used later
+    //@readonly entity BusinessPartners as projection on rm.BusinessPartners;
+
+}
+
+
+
 
     // entity Mitigations as projection on rm.Mitigations{ *,
     //     risks: redirected to Risks};
@@ -25,6 +39,4 @@ service RiskService {
 
     
 
-    // BusinessPartner will be used later
-    //@readonly entity BusinessPartners as projection on rm.BusinessPartners;
-}
+    

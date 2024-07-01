@@ -1,0 +1,15 @@
+
+### CREATE new product
+POST  http://localhost:39125/odata/v4/service/risk/addItem
+Content-Type: application/json
+
+{
+"title":"test",
+"descr":"test",
+"quantity": 2
+}
+
+### GET new product
+GET http://localhost:4004/odata/v4/service/risk/getItem(quantity=1)
+Content-Type: application/json
+

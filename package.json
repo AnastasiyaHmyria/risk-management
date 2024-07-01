@@ -21,6 +21,7 @@
     "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
+    "i18n": {"default_language": "de"},
     "requires": {
       "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",

@@ -7,7 +7,7 @@ using {
         User,
         sap.common.CodeList
 } from '@sap/cds/common';
-
+ 
 entity Risks : cuid, managed {
         title                    : String(100);
         owner                    : String;
@@ -41,3 +41,9 @@ entity ListOfRisks as select from Risks {
  owner,
  title
 };
+
+entity Items:cuid  {
+        title                    : String(100);
+        descr                    : String;      
+        quantity                 :Integer
+}
